@@ -1,11 +1,12 @@
-import Image from 'next/image';
-
-
 import { useEffect, useState } from "react";
+import Image from 'next/image';
+import Link from 'next/link';
 import { ToastContainer } from 'react-toastify';
 import Lottie from 'react-lottie';
 
 import styles from '../styles/pages/Signin.module.css';
+
+
 import api from '../../services/api';
 import SigninValidation from "../../utils/validation/SigninValidation";
 import Message from '../../components/Message'
@@ -79,37 +80,49 @@ function SignIn() {
                 <ToastContainer/>
                 <Image 
                     src={Logo} 
-                    alt="Logo Genérico" />
-                <Input
+                    alt="Logo Genérico" 
+                    width={130}
+                    height={42}
+                />
+                <input
+                    className={styles.input}
                     type="email" 
                     placeholder="E-mail" 
                     onChange={(e) => setEmail(e.target.value)} 
                     required
                 />
-                <Input 
+                <input
+                    className={styles.input}
                     type="password" 
                     placeholder="Senha" 
                     onChange={(e) => setPassword(e.target.value) } 
                     required
                 />
-                <ForgotPassword href="/forgot-password">
-                    Esqueceu sua senha?
-                </ForgotPassword>
-                <Button 
+                <Link href="/forgot-password">
+                    <a className={styles.forgotPassword}>
+                        Esqueceu sua senha?
+                    </a>
+                </Link>
+                <button 
+                    className={styles.button}
                     onClick={HandleSubmit}
                 >
                     { loading ?
-                        <Animation>
+                        <div className={styles.animation}>
                             <Lottie options={ defaultOptions } />
-                        </Animation> 
+                        </div> 
                         :
 
                             "Entrar"
                         }
-                </Button>
-                <Signup href="/signup">Ainda não tem cadastro? <Span>Cadastra-se</Span></Signup>
-            </Form>            
-        </Container>
+                </button>
+                <Link 
+                    href="/signup"
+                >
+                    <a className={styles.signup}>Ainda não tem cadastro? <span className={styles.span}>Cadastra-se</span></a>
+                </Link>
+            </div>            
+        </div>
     )
 }
 

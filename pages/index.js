@@ -7,12 +7,13 @@ import Lottie from 'react-lottie';
 import styles from '../styles/pages/Signin.module.css';
 
 
-import api from '../../services/api';
-import SigninValidation from "../../utils/validation/SigninValidation";
-import Message from '../../components/Message'
+import api from '../services/api';
 
-import * as animationData from '../../assets/animations/loading.json'
-import Logo from '../../assets/images/logo.png'
+import SigninValidation from "../utils/validation/SigninValidation";
+import Message from '../components/Message'
+
+import * as animationData from '../assets/animations/loading.json'
+import Logo from '../assets/images/logo.png'
 
 function SignIn() {
     const [email, setEmail] = useState('');

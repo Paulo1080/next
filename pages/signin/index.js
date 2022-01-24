@@ -13,7 +13,7 @@ import SigninValidation from "../../utils/validation/SigninValidation";
 import Message from '../../components/Message';
 
 import * as animationData from '../../assets/animations/loading.json';
- import logo from '../../assets/images/logo.png'; 
+import logo from '../../assets/images/logo.png'; 
 
 
 function SignIn() {

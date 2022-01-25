@@ -1,0 +1,14 @@
+.header {
+    grid-area: header;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+}
+
+@media (max-widht: 660px){
+    .header {
+        flex-direction: column;
+    }
+}
+

@@ -12,8 +12,8 @@ import api from '../../services/api';
 import SigninValidation from "../../utils/validation/SigninValidation";
 import Message from '../../components/Message';
 
-import * as animationData from '../../assets/animations/loading.json';
-import logo from '../../assets/images/logo.png'; 
+import * as animationData from '../../assets/animation/loading.json';
+
 
 
 function SignIn() {
@@ -21,7 +21,7 @@ function SignIn() {
     const [password, setPassword] = useState('');
     const [loading, setLoading] = useState(false);
 
-    const defaultOptions = {
+   const defaultOptions = {
         loop: true,
         autoplay: true,
         animationData: animationData,
@@ -80,9 +80,14 @@ function SignIn() {
         <div className={styles.container}>
             <div className={styles.Form}>
                 <ToastContainer/>
-                 <Image
-                    src={logo}
-                />
+                <div className={styles.imgContainer}>
+                    <Image
+                        src="/images/logo.png"
+                        width={220}
+                        height={40} 
+                    />
+                </div>
+                
                 <input
                     className={styles.input}
                     type="email" 

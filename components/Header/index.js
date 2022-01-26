@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import Link from 'next/link';
+import Cookies from 'js-cookie';
 
 import styles from '../../styles/components/Header.module.css';
 import Image from 'next/image';
@@ -33,8 +34,15 @@ function Header() {
                 </Link>               
             </div>
             <div className={styles.containerLinks}>
-                <Link href="">Sobre</Link>
-                <Link href="">Sair</Link>
+                <Link href="">
+                    <a>
+                        Cursos
+                    </a>
+                </Link>
+                <a
+                    onClick={handleLogout}
+                >Sair
+                </a>
             </div>
             
         </div>

@@ -6,6 +6,19 @@
     padding: 30px 10%;
 }
 
+.containerLinks a{
+    color: var(--color-withe);
+    cursor: pointer;
+}
+
+.containerLinks a:hover {
+    border-bottom: 2px solid var(--color-primary);
+}
+
+.containerLinks a + a {
+    margin-left: 20px;
+}
+
 @media (max-widht: 660px){
     .header {
         flex-direction: column;

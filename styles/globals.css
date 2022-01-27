@@ -27,6 +27,7 @@ a{
   --color-gray: #5f5f5f;
   --color-shape: #c0c0c0;
   --color-background: #121214;
+  --color-danger: red;
 
   /*Styles*/
   --border-radius: 8px;

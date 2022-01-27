@@ -18,3 +18,12 @@
 .card a {
     color: var(--color-shape);
 }
+
+.delete {
+    color: var(--color-danger)!important;
+    cursor: pointer;
+}
+
+.card a + a {
+   margin-left: 10px; 
+}

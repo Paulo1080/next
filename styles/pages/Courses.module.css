@@ -60,6 +60,16 @@
     line-height: 30px;
   }
   
+  @media (max-width: 1000px) {
+    .header{
+      flex-direction: column;
+    }
+
+    .header h1 {
+      font-size: 36px;
+    }
+  }
+
   @media (max-width: 800px) {
     .cardContainer {
       grid-template-columns: auto;
@@ -67,6 +77,21 @@
 
     .container h1 {
       padding: 40px 10%;
+      font-size: 38px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .header {
+      width: 90%;
+    }
+
+    .container {
+      padding:2rem 1% 4rem;
+    }
+
+    .container h1 {
+      padding: 40px 1%;
       font-size: 38px;
     }
   }

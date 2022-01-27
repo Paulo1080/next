@@ -26,7 +26,8 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   max-width: 800px;
-  grid-gap: 10%;
+  grid-row-gap: 20px;
+  grid-column-gap: 10%;
 }
 
 .card {
@@ -34,10 +35,11 @@
   padding: 30px 10%;
   border-radius: var(--border-radius);
   cursor: pointer;
+  min-width: 300px;
 }
 
 .card:hover {
-  border: 2px solid var(--color-primary);
+  border: 2px solid var(--color-white);
 }
 
 .card h2 {
@@ -50,8 +52,22 @@
   line-height: 30px;
 }
 
-@media (max-width: 660px) {
+@media (max-width: 1000px) {
   .cardContainer {
     grid-template-columns: auto;
+  }
+}
+
+@media (max-width: 660px) {
+  .container h1 {
+    font-size: 40px;
+  }
+
+  .card {
+    min-width: 200px;
+  }
+
+  .container h1 {
+    padding: 45px 10%;
   }
 }

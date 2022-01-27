@@ -34,7 +34,7 @@ function Header() {
                 </Link>               
             </div>
             <div className={styles.containerLinks}>
-                <Link href="">
+                <Link href="/courses">
                     <a>
                         Cursos
                     </a>

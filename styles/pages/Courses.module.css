@@ -14,11 +14,12 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    padding: 4rem 5%;
   }
   
   .container h1 {
     color: var(--color-secondary);
-    padding: 100px 10%;
+    padding: 40px 10%;
     font-size: 56px;
   }
   
@@ -26,7 +27,8 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     max-width: 800px;
-    grid-gap: 10%;
+    grid-row-gap: 20%;
+    grid-column-gap: 5%;
   }
   
   .card {
@@ -50,8 +52,13 @@
     line-height: 30px;
   }
   
-  @media (max-width: 660px) {
+  @media (max-width: 800px) {
     .cardContainer {
       grid-template-columns: auto;
+    }
+
+    .container h1 {
+      padding: 40px 10%;
+      font-size: 38px;
     }
   }

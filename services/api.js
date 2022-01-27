@@ -1,12 +1,14 @@
 import axios from 'axios';
+import Cookies from 'js-cookie';
 
 const api = axios.create({
     //baseURL: "https://admin-portal-over.herokuapp.com"
-    baseURL: "http://localhost:8080"
+    baseURL: "http://admin-app-over.herokuapp.com"
 })
 
 api.interceptors.request.use(async config => {
-   let response = localStorage.getItem("over_token");
+
+   let response = Cookies.getItem("over_token");
    
    if(response) {
         var token = `Bearer ${response}`;

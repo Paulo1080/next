@@ -35,3 +35,24 @@ a{
 body {
   background-color: var(--color-background);
 }
+
+.btn {
+  border-radius: var(--border-radius);
+  padding: 10px 15px;
+  border: none;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--color-white);
+  cursor: pointer;
+  transition: 0.2s;
+  max-height: 40px;
+
+}
+
+.btnPrimary {
+  background: var(--color-gradient);
+}
+
+.btnPrimary:hover {
+  background: var(--color-gradient-hover);
+}

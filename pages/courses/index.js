@@ -4,6 +4,7 @@ import CardCourse from '../../components/CardCourse';
 import api from '../../services/api';
 import Cookies from 'js-cookie';
 import { useEffect, useState } from 'react';
+import Link from 'next/link';
 
 function Courses (courses) {
 
@@ -17,7 +18,17 @@ function Courses (courses) {
         <div className={styles.structure}>
         <Header />
             <div className={styles.container}>
-                <h1>Lista de cursos</h1>
+                <div className={styles.header}>
+                    <h1>Lista de cursos</h1>
+                    <Link
+                        href="/course"
+                    >
+                        <a className="btn btnPrimary">
+                            Novo Curso
+                        </a>
+                    </Link>
+                </div>
+                
                 <div className={styles.cardContainer}>
                   {
                       coursesState.map((courses, index) => (

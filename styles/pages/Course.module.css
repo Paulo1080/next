@@ -14,20 +14,12 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 4rem 5%;
+    padding: 2rem 5% 200px;
   }
   
-  .header {
-    display: flex;
-    padding: 40px 10%;
-    align-items: center;
-    justify-content: space-between;
-    width: 70%;
-  }
-
   .container h1 {
     color: var(--color-secondary);
-    
+    padding: 40px 10%;
     font-size: 56px;
   }
   
@@ -59,7 +51,44 @@
     color: var(--color-shape);
     line-height: 30px;
   }
+
+  .input {
+    padding: 10px 15px;
+    border-radius: var(--border-radius);
+    font-family: 'inter', sans-serif;
+    font-size: 18px;
+    outline: none;
+    border: 2px solid var(--color-secondary);
+    margin-bottom: 20px;
+    color: var(--color-white);
+    background-color: transparent; 
+  }
   
+  .select {
+    padding: 10px 15px;
+    border-radius: var(--border-radius);
+    font-family: 'inter', sans-serif;
+    font-size: 18px;
+    outline: none;
+    border: 2px solid var(--color-secondary);
+    margin-bottom: 20px;
+    color: var(--color-shape);
+    background-color: transparent;
+  }
+
+  .formContainer {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+  }
+
+  @media (max-width: 800px) {
+    .formContainer {
+      width: 90%;
+    }
+  }
+
+
   @media (max-width: 800px) {
     .cardContainer {
       grid-template-columns: auto;
@@ -69,4 +98,12 @@
       padding: 40px 10%;
       font-size: 38px;
     }
+  }
+
+  @media (max-width: 600px) {
+    .formContainer {
+      width: 95%;
+    }
+
+   
   }

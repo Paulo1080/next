@@ -10,7 +10,7 @@ function CardCourse( {course} ) {
                 href={`/course/${course.slug}`}
             >
                 <a>
-                    Ver curso
+                    Editar Curso
                 </a>
 
 
